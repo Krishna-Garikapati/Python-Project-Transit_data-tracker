@@ -8,6 +8,8 @@ def parse_data(data):
     if isinstance(data, dict):
         #for app i need id,routeID, latitude and longitude all these are under entity key in data dictionary
         data_values = data["entity"]
+    else:
+        return []
 
     for each_item in data_values:
         try:
